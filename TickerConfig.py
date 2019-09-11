@@ -4,24 +4,37 @@
 # 如果这个时候捡漏捡到的话，也是可以付款成功的，也就是说，捡漏+候补，可以最大程度提升抢票成功率
 
 # 刷票模式：1=刷票 2=候补+刷票
-TICKET_TYPE = 2
+TICKET_TYPE = 1
 
 # 出发日期(list) "2018-01-06", "2018-01-07"
 STATION_DATES = [
-    "2019-09-30"
+    "2019-10-07"
 ]
 
 # 填入需要购买的车次(list)，"G1353"
 STATION_TRAINS = [
-    "",
-    "",
+    "G1812",
+    "G1816",
+    "G362",
+    "G1918",
+    "G1922",
+    "G1958",
+    "G1820",
+    "G1824",
+    "G1828",
+    "G1868",
+    "G1926",
+    "G1972",
+    "G1854",
+    "G1938",
+    "G1976"
 ]
 
 # 出发城市，比如深圳北，就填深圳就搜得到
-FROM_STATION = ""
+FROM_STATION = "郑州"
 
 # 到达城市 比如深圳北，就填深圳就搜得到
-TO_STATION = ""
+TO_STATION = "上海"
 
 # 座位(list) 多个座位ex:
 # "商务座",
@@ -34,7 +47,7 @@ TO_STATION = ""
 # "无座",
 # "动卧",
 SET_TYPE = [
-    "",
+    "二等座",
 ]
 
 # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
@@ -45,13 +58,12 @@ IS_MORE_TICKET = True
 # - "张三"
 # - "李四"
 TICKET_PEOPLES = [
-    "",
-    "",
+    "王涛",
 ]
 
 # 12306登录账号
-USER = ""
-PWD = ""
+USER = "qq452957191"
+PWD = "f8299472"
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 TICKET_BLACK_LIST_TIME = 5
@@ -113,7 +125,7 @@ OPEN_TIME = "13:00:00"
 COOKIE_TYPE = 1
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
-CHROME_PATH = "/Users/wenxianping/Downloads/chromedriver"
+CHROME_PATH = "/usr/bin/chromedriver"
 
 PASSENGER_TICKER_STR = {
     '一等座': 'M',
