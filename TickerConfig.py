@@ -6,6 +6,7 @@
 # 刷票模式：1=刷票 2=候补+刷票
 TICKET_TYPE = 1
 
+
 # 出发日期(list) "2018-01-06", "2018-01-07"
 STATION_DATES = [
     "2019-10-07"
@@ -29,7 +30,6 @@ STATION_TRAINS = [
     "G1938",
     "G1976"
 ]
-
 # 出发城市，比如深圳北，就填深圳就搜得到
 FROM_STATION = "郑州"
 
@@ -120,12 +120,16 @@ IS_PROXY = 0
 
 # 预售放票时间, 如果是捡漏模式，可以忽略此操作
 OPEN_TIME = "13:00:00"
+
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
-COOKIE_TYPE = 1
-# 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
+COOKIE_TYPE = 2
+# 如果COOKIE_TYPE=2，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
 CHROME_PATH = "/usr/bin/chromedriver"
+
+# 1=>为一直随机ua,2->只启动的时候随机一次ua
+RANDOM_AGENT = 2
 
 PASSENGER_TICKER_STR = {
     '一等座': 'M',
@@ -140,4 +144,4 @@ PASSENGER_TICKER_STR = {
 }
 
 # 软件版本
-RE_VERSION = "1.1.108"
+RE_VERSION = "1.1.112"
